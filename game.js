@@ -124,7 +124,7 @@ let Barch_Snake = (function () {
         ctx.fillRect(0, canv.height-gridSize+1,canv.width,gridSize);
       }
 
-      var stopped = velocity.x == 0 && velocity.y == 0;
+      let stopped = velocity.x == 0 && velocity.y == 0;
 
       player.x += velocity.x;
       player.y += velocity.y;
@@ -150,8 +150,8 @@ let Barch_Snake = (function () {
       if(!stopped) {
         ctx.fillStyle = 'rgba(200,200,200,0.2)';
         ctx.font = "small-caps 14px Helvetica";
-        ctx.fillText("(esc) reset", 24, 356);
-        ctx.fillText("(space) pause", 24, 374);
+        ctx.fillText("(esc) сброс", 24, 356);
+        ctx.fillText("(space) пауза", 24, 374);
       }
 
       ctx.fillStyle = 'blue';
@@ -190,12 +190,13 @@ let Barch_Snake = (function () {
       if(stopped) {
         ctx.fillStyle = 'rgba(250,250,250,0.8)';
         ctx.font = "small-caps bold 14px Helvetica";
+        ctx.fillText("B/arch-Snake", 24, 355);
         ctx.fillText("Нажмите кнопку чтобы начать игру...", 24, 374);
       }
 
       ctx.fillStyle = 'white';
       ctx.font = "bold small-caps 16px Helvetica";
-      ctx.fillText("Очки: " + points, 288, 40);
+      ctx.fillText("Очки: " + points, 292, 40);
       ctx.fillText("Рекорд: " + pointsMax, 292, 60);
 
       return reward;
